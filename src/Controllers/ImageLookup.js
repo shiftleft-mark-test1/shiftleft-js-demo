@@ -7,7 +7,10 @@ class ImageLookup {
     /* Can read any file in the server by passing the filename (image) in the query params */
     /* ex: http GET http://localhost:8089/api/v1/image-lookup image=="package.json" */
     const fileContent = fs.readFileSync(req.query.image).toString();
-    logger.debug(fileContent);
+    // logger.debug(fileContent);
+    string sanitizedStr = sanitizeString(fileContent)
+    fileContent = sanitizedStr;
+    logger.debug(sanitizedStr);
     res.send(fileContent);
   }
   
