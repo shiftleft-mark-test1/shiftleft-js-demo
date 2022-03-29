@@ -6,6 +6,7 @@ class ImageLookup {
     /* File Traversal exploit */
     /* Can read any file in the server by passing the filename (image) in the query params */
     /* ex: http GET http://localhost:8089/api/v1/image-lookup image=="package.json" */
+    //this is where I will remediate the vulnerability
     const fileContent = fs.readFileSync(req.query.image).toString();
     logger.debug(fileContent);
     res.send(fileContent);
