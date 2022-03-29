@@ -17,6 +17,3 @@ class ImageLookup {
 
 module.exports = ImageLookup;
 
-}
-
-module.exports = ImageLookup;
