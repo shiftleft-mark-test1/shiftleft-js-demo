@@ -18,4 +18,4 @@ module.exports = ImageLookup;
 
 }
 
-module.exports = ImageLookup;
+//module.exports = ImageLookup;
